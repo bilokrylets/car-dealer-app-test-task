@@ -89,7 +89,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - **Tailwind CSS** – Utility-first CSS framework for styling.
 - **React Suspense** – For handling loading states.
 - **ESLint** – For maintaining code quality and consistency.
-- - **NHTSA Vehicle API** – For fetching vehicle makes and models.
+- **NHTSA Vehicle API** – For fetching vehicle makes and models.
 
 ## License
 
