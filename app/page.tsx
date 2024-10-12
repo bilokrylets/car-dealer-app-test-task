@@ -13,11 +13,11 @@ export default function Home() {
   const [selectedYear, setSelectedYear] = useState('');
 
   useEffect(() => {
-    async function fetch() {
+    async function loadVehicleMakes() {
       setVehicleMakes(await fetchVehicleMake());
     }
 
-    fetch();
+    loadVehicleMakes();
   }, []);
 
   const handleMakeChange = (e: ChangeEvent<HTMLSelectElement>) => {
