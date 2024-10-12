@@ -5,6 +5,7 @@ import { VehicleMake } from './_models/vehicleMake';
 import Select from './_components/Select';
 import { yearsList } from './_utils/yearList';
 import LinkButton from './_components/LinkButton';
+import { fetchVehicleMake } from './_services/fetchVehicleMake';
 
 export default function Home() {
   const [vehicleMakes, setVehicleMakes] = useState<VehicleMake[]>([]);
@@ -12,19 +13,11 @@ export default function Home() {
   const [selectedYear, setSelectedYear] = useState('');
 
   useEffect(() => {
-    async function fetchVehicle() {
-      try {
-        const response = await fetch(
-          'https://vpic.nhtsa.dot.gov/api/vehicles/GetMakesForVehicleType/car?format=json'
-        );
-        const data = await response.json();
-        setVehicleMakes(data.Results);
-      } catch (error) {
-        console.error(error);
-      }
+    async function fetch() {
+      setVehicleMakes(await fetchVehicleMake());
     }
 
-    fetchVehicle();
+    fetch();
   }, []);
 
   const handleMakeChange = (e: ChangeEvent<HTMLSelectElement>) => {
