@@ -29,7 +29,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="flex flex-col min-h-screen p-12 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]  ">
+          <main className="  flex flex-col gap-8 row-start-2 items-center   sm:items-start ">
+            {children}
+          </main>
+          <footer className="row-start-3  flex gap-6 flex-wrap items-center justify-center"></footer>
+        </div>
       </body>
     </html>
   );
