@@ -7,3 +7,8 @@ export const yearsList = Array.from(
     label: 2015 + index,
   })
 );
+
+export const yearsArray = Array.from(
+  { length: new Date().getFullYear() - 2014 },
+  (_, index) => 2015 + index
+);

@@ -1,8 +1,6 @@
 export async function fetchVehicleMake() {
   try {
-    const response = await fetch(
-      'https://vpic.nhtsa.dot.gov/api/vehicles/GetMakesForVehicleType/car?format=json'
-    );
+    const response = await fetch(`${process.env.NEXT_PUBLIC_GET_MAKES_URL}`);
     const data = await response.json();
     return data.Results;
   } catch (error) {
