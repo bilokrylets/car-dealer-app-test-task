@@ -6,25 +6,57 @@ This project is a **Next.js application** that allows users to filter vehicles b
 
 ## Features
 
-#### Filter Page:
+- #### Filter Page:
 
-Allows users to select a vehicle make and model year with a navigation button to the result page.
+  Allows users to select a vehicle make and model year with a navigation button to the result page.
 
-#### Result Page:
+- #### Result Page:
 
-Displays available models based on the selected make and year using API data.
+  Displays available models based on the selected make and year using API data.
 
-#### Static Generation:
+- #### Static Generation:
 
-Uses generateStaticParams to pre-render pages based on dynamic routes.
+  Uses generateStaticParams to pre-render pages based on dynamic routes.
 
-#### Loading States:
+- #### Loading States:
 
-Implements React Suspense for loading indicators during data fetches.
+  Implements React Suspense for loading indicators during data fetches.
 
-#### Tailwind CSS Styling:
+- #### Tailwind CSS Styling:
+  Ensures responsive, accessible, and modern design for all components.
 
-Ensures responsive, accessible, and modern design for all components.
+## Application Architecture
+
+### Overview
+
+The application follows a standard **Next.js** architecture with a focus on modularity and reusability. It consists of two main pages: the **Filter Page** and the **Result Page**.
+
+### Pages
+
+- **Filter Page (`/`)**
+
+  - User selects a vehicle make and model year.
+  - Fetches data from the NHTSA API to populate dropdowns.
+  - Contains a navigation button to go to the Result Page.
+
+- **Result Page (`/result/[makeId]/[year]`)**
+  - Displays vehicle models based on selected make and year.
+  - Utilizes `generateStaticParams` for static generation of routes.
+
+### Data Flow
+
+1. **Client-side Data Fetching**
+   - The Filter Page fetches vehicle makes and model years from the API on load.
+2. **Server-side Data Fetching**
+
+   - The Result Page fetches vehicle models based on the selected parameters when navigated to.
+
+3. **Static Generation**
+
+   - The application pre-generates static paths for the Result Page to improve performance.
+
+4. **Error Handling**
+   - Each fetch implements error handling to manage data fetch failures gracefully.
 
 ## Installation
 
