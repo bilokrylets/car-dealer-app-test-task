@@ -1,4 +1,4 @@
-# React Quiz
+# Сar Dealer App
 
 This project is a **Next.js application** that allows users to filter vehicles by **make** and **model year**, and view the corresponding models. The app is styled using **Tailwind CSS** and showcases key features like dynamic routing, data fetching, and static generation with Next.js.
 
