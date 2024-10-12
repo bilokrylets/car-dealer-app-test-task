@@ -4,10 +4,9 @@ import LinkButton from './_components/LinkButton';
 
 type ErrorProps = {
   error: Error;
-  reset: () => void;
 };
 
-export default function Error({ error, reset }: ErrorProps) {
+export default function Error({ error }: ErrorProps) {
   return (
     <div className="m-auto flex flex-col py-8  items-center gap-4">
       <h3 className="text-4xl  font-extrabold uppercase">Error</h3>
