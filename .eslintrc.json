@@ -1,3 +1,13 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript",
+    "eslint:recommended",
+    "plugin:@next/next/recommended",
+    "prettier"
+  ],
+  "plugins": ["@next/next", "react-hooks", "prettier"],
+  "rules": {
+    "prettier/prettier": "warn"
+  }
 }
