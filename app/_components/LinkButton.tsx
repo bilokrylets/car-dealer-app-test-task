@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 type Props = {
   href: string;
-  disabled: boolean;
+  disabled?: boolean;
   children: string;
 };
 export default function LinkButton({ href, disabled, children }: Props) {
