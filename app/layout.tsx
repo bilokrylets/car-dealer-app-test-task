@@ -29,11 +29,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="flex flex-col min-h-screen p-12 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]  ">
+        <div className="flex max-w-[1280px] mx-auto m flex-col min-h-screen p-4 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]  ">
+          <header className="border-b-2 border-gray-500 mb-5 bor ">
+            <h1 className=" w-full text-5xl  font-bold uppercase p-2">
+              the Car Dealer App
+            </h1>
+          </header>
+
           <main className="  flex flex-col gap-8 row-start-2 items-center   sm:items-start ">
             {children}
           </main>
-          <footer className="row-start-3  flex gap-6 flex-wrap items-center justify-center"></footer>
         </div>
       </body>
     </html>
