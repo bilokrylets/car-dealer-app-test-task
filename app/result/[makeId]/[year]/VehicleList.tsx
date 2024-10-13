@@ -1,6 +1,5 @@
 import { Vehicle } from '../../../_models/vehicle';
 import { fetchVehicleModels } from '../../../_services/fetchVehicleModels';
-
 import LinkButton from '../../../_components/LinkButton';
 
 type Props = { makeId: string; year: string };
