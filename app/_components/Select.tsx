@@ -20,11 +20,11 @@ export default function Select({
 }: Props) {
   return (
     <div>
-      <label className="block mb-2 text-sm font-medium  text-white">
+      <label className="mb-2 block text-sm font-medium text-white">
         {label}
       </label>
       <select
-        className="border text-sm rounded-lg  block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+        className="block w-full rounded-lg border border-gray-600 bg-gray-700 p-2.5 text-sm text-white placeholder-gray-400 focus:border-blue-500 focus:ring-blue-500"
         name={name}
         onChange={onChange}
         value={currentValue}

@@ -21,11 +21,11 @@ export default async function VehicleList({ makeId, year }: Props) {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold text-center border-b-2 border-gray-800 ">
+      <h1 className="border-b-2 border-gray-800 text-center text-2xl font-bold">
         Vehicle models of {vehicles[0].Make_Name} for {year}
       </h1>
 
-      <div className="py-4  grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-4 ">
+      <div className="grid grid-cols-1 gap-4 py-4 md:grid-cols-2 lg:grid-cols-3">
         {vehicles.map((vehicle) => (
           <VehicleListCard key={vehicle.Make_ID} vehicle={vehicle} />
         ))}
@@ -40,8 +40,8 @@ type VehicleListCardProps = {
 
 function VehicleListCard({ vehicle }: VehicleListCardProps) {
   return (
-    <div className=" bg-gray-700 bg-opacity-75 p-4 rounded-md border-2 border-gray-700">
-      <h2 className="text-center text-lg font-semibold border-b-[1px] border-gray-600 mb-2">
+    <div className="rounded-md border-2 border-gray-700 bg-gray-700 bg-opacity-75 p-4">
+      <h2 className="mb-2 border-b-[1px] border-gray-600 text-center text-lg font-semibold">
         {vehicle.Make_Name} {vehicle.Model_Name}
       </h2>
       <p>Make ID: {vehicle.Make_ID}</p>

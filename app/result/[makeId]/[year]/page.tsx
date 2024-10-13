@@ -27,7 +27,7 @@ export default async function Result({
   params: { makeId, year },
 }: ResultProps) {
   return (
-    <div className="min-h-screen w-full p-6">
+    <div className="w-full p-6">
       <Suspense fallback={<Spinner />}>
         <VehicleList makeId={makeId} year={year} />
       </Suspense>

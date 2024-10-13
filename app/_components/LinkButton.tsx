@@ -9,7 +9,7 @@ export default function LinkButton({ href, disabled, children }: Props) {
   return (
     <Link href={disabled ? '#' : href}>
       <button
-        className="disabled:cursor-not-allowed disabled:opacity-50   border text-sm rounded-lg  block w-auto py-2.5 px-5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white enabled:hover:ring-blue-500 enabled:hover:border-blue-500"
+        className="block w-auto rounded-lg border border-gray-600 bg-gray-700 px-5 py-2.5 text-sm text-white placeholder-gray-400 enabled:hover:border-blue-500 enabled:hover:ring-blue-500 disabled:cursor-not-allowed disabled:opacity-50"
         disabled={disabled}
       >
         {children}

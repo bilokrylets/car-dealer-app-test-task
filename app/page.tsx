@@ -31,7 +31,7 @@ export default function Home() {
   const isButtonDisabled = !selectedMakeId || !selectedYear;
 
   return (
-    <div className="flex flex-col gap-5 w-full max-w-[400px] m-auto ">
+    <div className="m-auto flex w-full max-w-[400px] flex-col gap-5">
       <Select
         label="Select vehicle make: "
         options={vehicleMakes.map((make) => ({
