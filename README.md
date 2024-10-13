@@ -6,23 +6,23 @@ This project is a **Next.js application** that allows users to filter vehicles b
 
 ## Features
 
-- #### Filter Page:
+- **Filter Page:**
 
   Allows users to select a vehicle make and model year with a navigation button to the result page.
 
-- #### Result Page:
+- **Result Page:**
 
   Displays available models based on the selected make and year using API data.
 
-- #### Static Generation:
+- **Static Generation:**
 
   Uses generateStaticParams to pre-render pages based on dynamic routes.
 
-- #### Loading States:
+- **Loading States:**
 
   Implements React Suspense for loading indicators during data fetches.
 
-- #### Tailwind CSS Styling:
+- **Tailwind CSS Styling:**
   Ensures responsive, accessible, and modern design for all components.
 
 ## Application Architecture
